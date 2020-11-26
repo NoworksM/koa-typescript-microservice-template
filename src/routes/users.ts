@@ -5,12 +5,10 @@ import {getRepository} from "typeorm";
 import {User} from "../entity/User";
 import ErrorResponseViewModel from "../models/ErrorResponseViewModel";
 import {hash} from "../util/bcrypt";
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import * as config from "../../../../config";
 import CreateUserViewModel from "../models/auth/CreateUserViewModel";
 import omit from "lodash/omit";
 import role from "../middleware/role";
+import config from "../config";
 
 
 const router = new Router({prefix: '/users'});

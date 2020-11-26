@@ -8,9 +8,7 @@ import {User} from "../entity/User";
 import ErrorResponseViewModel from "../models/ErrorResponseViewModel";
 import {compare} from "../util/bcrypt";
 import jwt from 'jsonwebtoken';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import * as config from "../../../../config";
+import config from "../config";
 
 
 const router = new Router({prefix: '/auth'});

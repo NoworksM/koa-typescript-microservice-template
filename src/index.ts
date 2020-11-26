@@ -1,9 +1,5 @@
-import Koa, {Middleware} from 'koa';
-import {ExtendableContext, Next} from 'koa';
+import Koa, {ExtendableContext, Middleware, Next} from 'koa';
 import jwt from 'koa-jwt';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import * as config from '../../../config';
 import {createConnection} from "typeorm";
 import authRouter from './routes/auth';
 import userRouter from './routes/users';
@@ -11,6 +7,7 @@ import bodyParser from "koa-bodyparser";
 import convert from "koa-convert";
 import cors from "koa-cors";
 import userMiddleware from "./middleware/user";
+import config from "./config";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 // noinspection JSUnusedLocalSymbols
